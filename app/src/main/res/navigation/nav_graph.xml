@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.interneted.demo.ui.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_main_to_detailFragment"
+            app:destination="@id/detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail"
+        android:name="com.interneted.demo.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detail_to_webViewFragment"
+            app:destination="@id/webView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webView"
+        android:name="com.interneted.demo.ui.detail.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_webview"
+        />
+
+
+</navigation>
